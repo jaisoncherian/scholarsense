@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "text-subdued": "#9CA3AF", "error": "#ba1a1a", "surface-container": "#f0eded", "outline": "#717973", "on-tertiary-fixed": "#002108", "on-primary-fixed": "#002113", "tertiary": "#194221", "secondary-fixed": "#e2e897", "on-secondary-container": "#616724", "surface-card": "#FFFFFF", "surface-container-high": "#eae7e7", "secondary-container": "#dfe595", "text-secondary": "#606060", "surface-tint": "#3b6750", "tertiary-fixed-dim": "#a4d2a4", "on-error-container": "#93000a", "inverse-primary": "#a2d1b5", "primary": "#15422e", "secondary": "#5d6220", "surface-container-highest": "#e5e2e1", "on-secondary": "#ffffff", "border-subtle": "#EAEAEA", "on-secondary-fixed": "#1b1d00", "on-error": "#ffffff", "inverse-on-surface": "#f3f0ef", "background": "#fcf9f8", "surface-bright": "#fcf9f8", "surface-variant": "#e5e2e1", "tertiary-container": "#315a36", "on-primary": "#ffffff", "surface-bg": "#F8F8F8", "error-container": "#ffdad6", "on-background": "#1b1b1b", "primary-fixed-dim": "#a2d1b5", "on-secondary-fixed-variant": "#454a08", "surface": "#fcf9f8", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#264f2c", "accent-pill-fill": "#EAF7EA", "inverse-surface": "#313030", "on-primary-fixed-variant": "#234f3a", "on-surface": "#1b1b1b", "text-primary": "#1C1C1C", "primary-fixed": "#bdeed0", "border-muted": "#E5E7EB", "risk-low": "#529E72", "surface-container-low": "#f6f3f2", "secondary-fixed-dim": "#c6cc7e", "on-tertiary-container": "#a2d0a2", "outline-variant": "#c1c9c1", "on-primary-container": "#a0cfb4", "primary-container": "#2e5a44", "on-surface-variant": "#414943", "surface-dim": "#dcd9d9", "risk-medium": "#DCA54C", "risk-high": "#D95D5D", "accent-sage-tint": "#E3F6E3", "tertiary-fixed": "#bfeebf", "on-tertiary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "2.5rem", "space-xl": "1.75rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter": "1.25rem", "gutter-compact": "0.75rem", "margin-compact": "1rem", "space-md": "0.875rem", "margin": "2rem", "space-lg": "1.25rem" }, "fontFamily": { "headline-sm": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "data-metric": [ "Plus Jakarta Sans" ], "body-lg": [ "Inter" ], "data-metric-sm": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "display-hero": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "label-md": [ "Inter" ], "label-sm": [ "Inter" ], "body-md": [ "Inter" ] }, "fontSize": { "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "data-metric": [ "32px", { "lineHeight": "38px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "data-metric-sm": [ "20px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-hero": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-md": [ "22px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "label-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "label-sm": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface-bg font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-card z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-lg flex items-center gap-space-sm"><img alt="ScholarSense Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wc1X4izZj0ozchNdaBxRd0JeMmS6i7S_5O7IVv8XWAKB1ZHRtvk4BG7NYqzQPfkrSF3iw0nYiwOJduZUMvIgWSpxSzmvk6MBMzdgfxRp0BtYgYn_suDVDiMKWsMYr0EFkpYldlfDHYgJVXVkatIaIHFw1_ahAOr_kcD4bDFqPd2DySL7YQtnG_cJAte7_6AzRPx6uWOPvZDpPRbqyczMdvj1ow96EjUhZ4NIPB9je7597nDKBJJCgugAA"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight">ScholarSense</span><span class="font-label-sm text-label-sm text-text-secondary text-[10px] leading-tight">Student Success Intelligence</span></div></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-1" data-active-classes="bg-accent-pill-fill text-primary font-label-md rounded-lg shadow-sm"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 transition-all bg-accent-pill-fill text-primary font-label-md rounded-lg shadow-sm" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dataset-upload" href="#"><span class="material-symbols-outlined text-[20px]">cloud_upload</span><span class="font-label-md text-label-md">Dataset Upload</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="student-analytics" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-md text-label-md">Student Analytics</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="risk-predictions" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span class="font-label-md text-label-md">Risk Predictions</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="model-performance" href="#"><span class="material-symbols-outlined text-[20px]">memory</span><span class="font-label-md text-label-md">Model Performance</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="explainability" href="#"><span class="material-symbols-outlined text-[20px]">visibility</span><span class="font-label-md text-label-md">Explainability</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="interventions" href="#"><span class="material-symbols-outlined text-[20px]">volunteer_activism</span><span class="font-label-md text-label-md">Interventions</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-md text-label-md">Settings</span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container-low/60 rounded-t-xl mx-2 mb-2"><div class="p-2.5 bg-surface-card rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.02)] flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-text-subdued uppercase tracking-wider text-[10px]">Cohort Source</span><span class="flex items-center gap-1.5 font-label-sm text-label-sm text-risk-low"><span class="w-1.5 h-1.5 rounded-full bg-risk-low animate-pulse"></span>Live</span></div><span class="font-body-sm text-body-sm font-medium text-text-primary truncate">Fall 2024 Cohort (v2.4)</span><div class="flex items-center justify-between text-[11px] text-text-secondary"><span class="font-body-sm text-body-sm text-[11px]">4,820 Records</span><span class="font-body-sm text-body-sm text-[11px]">Synced 12m ago</span></div></div><div class="px-2.5 py-1.5 bg-surface-card/80 rounded-lg flex items-center justify-between"><span class="font-label-sm text-label-sm text-text-secondary text-[11px]">Model Engine</span><span class="font-label-sm text-label-sm text-primary font-semibold text-[11px]">Random Forest v1.4</span></div><div class="pt-2 flex items-center gap-space-sm"><img alt="Profile" class="w-9 h-9 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsDAoqvl32uWs8UKUAJEnLLB2rt5eSNtXCgUYr3pybaJZVLZSJNK04sheTD7vc3QidU0UM2Rk91gGd0ifsgWpH9vxPlavPgrcxVUDq0ZIJh6xugoEnTpQtAXiCxyPB2T8zXKPfzJrdPva4wYfDzyD9MavtbxKULQxypIUBS_LCzvdPgfa-uUNrzVUcLH3k-3ZeRBte1KvC_fo6wZCC1Vh2_cggd3LMQ7RagYHRCdeCe3LxMcsxkM4c"/><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-text-primary font-semibold truncate">Dr. Elena Vance</span><span class="font-label-sm text-label-sm text-text-secondary text-[11px] truncate">Dean of Academic Analytics</span><span class="font-label-sm text-label-sm text-text-subdued text-[10px] truncate">Pacific Crest University</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-card/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-2xl"><div class="relative flex-1"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full pl-9 pr-12 py-1.5 bg-surface-bg rounded-lg font-body-sm text-body-sm text-text-primary placeholder:text-text-subdued focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search students, cohort IDs, risk flags..." type="text"/><div class="absolute right-2.5 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-card font-label-sm text-label-sm text-text-subdued shadow-xs text-[10px]">⌘K</div></div><button class="flex items-center gap-2 px-space-md py-1.5 bg-surface-bg rounded-lg text-text-primary hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-primary text-[18px]">school</span><span class="font-label-md text-label-md whitespace-nowrap">AY 2024–2025 • All Undergraduate</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></button></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-1.5 px-space-md py-1 bg-accent-pill-fill rounded-full"><span class="material-symbols-outlined text-primary text-[16px]">account_balance</span><span class="font-label-sm text-label-sm text-primary font-medium">Pacific Crest University</span></div><div class="flex items-center gap-1"><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-card"></span></button><button aria-label="Help Documentation" class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help</span></button></div><button class="flex items-center gap-1.5 px-space-md py-1.5 bg-primary rounded-lg text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm"><span class="material-symbols-outlined text-[16px]">download</span><span>Export Summary</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-accent-sage-tint" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsDAoqvl32uWs8UKUAJEnLLB2rt5eSNtXCgUYr3pybaJZVLZSJNK04sheTD7vc3QidU0UM2Rk91gGd0ifsgWpH9vxPlavPgrcxVUDq0ZIJh6xugoEnTpQtAXiCxyPB2T8zXKPfzJrdPva4wYfDzyD9MavtbxKULQxypIUBS_LCzvdPgfa-uUNrzVUcLH3k-3ZeRBte1KvC_fo6wZCC1Vh2_cggd3LMQ7RagYHRCdeCe3LxMcsxkM4c"/></div></header><main class="relative pt-16 bg-surface-bg min-h-screen w-full px-space-lg"><div class="flex flex-col w-full pb-space-2xl">
+<!-- Top Notification / Status Banner -->
+<div class="flex items-center justify-between px-space-md py-2 bg-surface-card rounded-xl shadow-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-risk-low opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-risk-low"></span>
+</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Predictive Intelligence Active</span>
+<span class="font-label-sm text-label-sm text-text-subdued">•</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Model v1.4 Inference Stream: Fall 2024 Verified</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-body-sm text-body-sm text-text-secondary text-xs">Dataset: <code class="px-1.5 py-0.5 rounded bg-surface-container font-mono text-[11px] text-text-primary">ug_fall2024_admissions_records.csv</code></span>
+<button class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-1">
+<span>View Pipeline Logs</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Page Header -->
+<header class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md pb-space-lg">
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-accent-pill-fill font-label-sm text-label-sm text-primary font-semibold tracking-wide uppercase">Institutional Executive Desk</span>
+<span class="font-body-sm text-body-sm text-text-subdued">•</span>
+<span class="font-body-sm text-body-sm text-text-subdued">Pacific Crest University</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">Student Analytics Overview</h1>
+<p class="font-body-md text-body-md text-text-secondary">Understand student outcomes, identify emerging risks, and support student success through explainable predictive telemetry.</p>
+</div>
+<!-- Header Action Cluster -->
+<div class="flex flex-wrap items-center gap-space-sm self-start lg:self-auto">
+<div class="flex items-center gap-2 px-space-md py-2 bg-surface-card rounded-lg shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-risk-low opacity-60"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-risk-low"></span>
+</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Last synchronized: <strong class="text-text-primary font-medium">Today at 09:42 AM</strong></span>
+</div>
+<div class="relative">
+<button class="flex items-center gap-2 px-space-md py-2 bg-surface-card rounded-lg text-text-primary hover:bg-surface-container-high transition-all shadow-sm font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
+<span>Fall Term 2024</span>
+<span class="material-symbols-outlined text-text-subdued text-[18px]">expand_more</span>
+</button>
+</div>
+<button class="flex items-center gap-2 px-space-md py-2 bg-surface-card rounded-lg text-text-primary hover:bg-surface-container-high transition-all shadow-sm font-label-md text-label-md">
+<span class="material-symbols-outlined text-text-secondary text-[18px]">file_download</span>
+<span>Export Overview Report</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 bg-primary rounded-lg text-on-primary hover:bg-primary-container transition-all shadow-sm font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Upload New Dataset</span>
+</button>
+</div>
+</header>
+<!-- Row 1: Four Primary Executive KPI Metric Cards -->
+<section aria-label="Executive KPI Overview" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter mb-space-xl">
+<!-- KPI Card 1: Total Students -->
+<div class="flex flex-col justify-between p-space-lg bg-surface-card rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-text-subdued uppercase tracking-wider">Total Students</span>
+<div class="w-8 h-8 rounded-lg bg-accent-pill-fill flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-sm my-1">
+<span class="font-data-metric text-data-metric text-text-primary">4,820</span>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-accent-pill-fill font-label-sm text-label-sm text-primary font-medium">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+          +340 vs prev.
+        </span>
+</div>
+<div class="flex flex-col gap-2 pt-space-xs">
+<div class="flex items-center justify-between text-xs text-text-secondary">
+<span class="font-body-sm text-body-sm text-[12px]">Active enrollment across 6 divisions</span>
+<span class="font-label-sm text-label-sm text-risk-low font-medium">98.4% verified</span>
+</div>
+<!-- Mini Sparkline inline SVG -->
+<svg class="w-full h-7 text-primary/70" fill="none" viewbox="0 0 100 24">
+<path d="M0 18 Q 15 12, 30 15 T 60 8 T 85 11 T 100 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0 18 Q 15 12, 30 15 T 60 8 T 85 11 T 100 4 L 100 24 L 0 24 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+</div>
+</div>
+<!-- KPI Card 2: Students Requiring Review -->
+<div class="flex flex-col justify-between p-space-lg bg-surface-card rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-text-subdued uppercase tracking-wider">Students Requiring Review</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-sm my-1">
+<span class="font-data-metric text-data-metric text-text-primary">384</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-secondary font-medium">
+          8.0% of cohort
+        </span>
+</div>
+<div class="flex flex-col gap-2 pt-space-xs">
+<div class="flex items-center justify-between text-xs text-text-secondary">
+<span class="font-body-sm text-body-sm text-[12px]">62 pending immediate advisor outreach</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">16.1% queue</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 16.1%;"></div>
+</div>
+</div>
+</div>
+<!-- KPI Card 3: Observed Dropout Rate -->
+<div class="flex flex-col justify-between p-space-lg bg-surface-card rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-text-subdued uppercase tracking-wider">Observed Dropout Rate</span>
+<div class="w-8 h-8 rounded-lg bg-accent-pill-fill flex items-center justify-center text-risk-low">
+<span class="material-symbols-outlined text-[18px]">domain_verification</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-sm my-1">
+<span class="font-data-metric text-data-metric text-text-primary">14.2%</span>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-accent-pill-fill font-label-sm text-label-sm text-risk-low font-medium">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+          -2.1% from prior term
+        </span>
+</div>
+<div class="flex flex-col gap-2 pt-space-xs">
+<div class="flex items-center justify-between text-xs text-text-secondary">
+<span class="font-body-sm text-body-sm text-[12px]">Benchmark national average: 18.5%</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">-4.3% diff</span>
+</div>
+<!-- Mini Progress Bar against Benchmark -->
+<div class="w-full bg-surface-container-high rounded-full h-1.5 relative overflow-hidden">
+<div class="bg-risk-low h-1.5 rounded-full" style="width: 76%;"></div>
+</div>
+</div>
+</div>
+<!-- KPI Card 4: Model F1-Score -->
+<div class="flex flex-col justify-between p-space-lg bg-surface-card rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-text-subdued uppercase tracking-wider">Model F1-Score &amp; Accuracy</span>
+<div class="w-8 h-8 rounded-lg bg-accent-pill-fill flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-sm my-1">
+<span class="font-data-metric text-data-metric text-text-primary">0.892</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm text-text-primary font-medium">
+          AUC: 0.941
+        </span>
+</div>
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<div class="flex items-center justify-between text-xs">
+<span class="font-body-sm text-body-sm text-[11px] text-text-secondary">Random Forest v1.4</span>
+<span class="font-body-sm text-body-sm text-[11px] text-text-subdued">Thresh: 0.48</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-text-secondary">
+<span class="font-label-sm text-label-sm text-[11px]">Precision: <strong class="text-text-primary">0.884</strong></span>
+<span class="font-label-sm text-label-sm text-[11px]">Recall: <strong class="text-text-primary">0.901</strong></span>
+</div>
+</div>
+</div>
+</section>
+<!-- Row 2: Deep Analytics & Feature Stratification Grid -->
+<section aria-label="Visualizations Grid" class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-space-xl">
+<!-- Visual Card 1 (Span 4 cols): Outcome Distribution -->
+<div class="lg:col-span-4 flex flex-col justify-between p-space-xl bg-surface-card rounded-xl shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-1.5">
+<h2 class="font-headline-sm text-headline-sm text-text-primary">Outcome Distribution</h2>
+<span class="material-symbols-outlined text-[16px] text-text-subdued cursor-pointer" title="Breakdown of enrolled, completed, and early withdrawn cohorts">info</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-text-secondary">All Cohorts</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">Current observed trajectory across the 4,820 student record baseline.</p>
+<!-- Segmented Cohort Switcher -->
+<div class="flex items-center p-1 bg-surface-bg rounded-lg mb-space-lg gap-1">
+<button class="flex-1 py-1 px-2 rounded-md bg-surface-card font-label-sm text-label-sm text-text-primary shadow-xs transition-all text-center">All Colleges</button>
+<button class="flex-1 py-1 px-2 rounded-md font-label-sm text-label-sm text-text-secondary hover:text-text-primary transition-all text-center">STEM (1,840)</button>
+<button class="flex-1 py-1 px-2 rounded-md font-label-sm text-label-sm text-text-secondary hover:text-text-primary transition-all text-center">Humanities</button>
+</div>
+<!-- Visual Multi-segment Distribution Bar -->
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden flex gap-0.5 mb-space-md">
+<div class="bg-primary h-full transition-all" style="width: 71.0%;" title="Enrolled: 71.0%"></div>
+<div class="bg-risk-low h-full transition-all" style="width: 14.8%;" title="Graduate / On Track: 14.8%"></div>
+<div class="bg-text-secondary h-full transition-all" style="width: 14.2%;" title="Dropout / Deficit: 14.2%"></div>
+</div>
+<!-- Breakdown Metric Stack -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-bg">
+<div class="flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-text-primary">Enrolled (Good Standing)</span>
+<span class="font-body-sm text-body-sm text-[11px] text-text-secondary">On-track persistence</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-label-md text-label-md font-semibold text-text-primary">3,422</div>
+<div class="font-label-sm text-label-sm text-text-secondary">71.0%</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-bg">
+<div class="flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-risk-low"></span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-text-primary">Completed / Graduated</span>
+<span class="font-body-sm text-body-sm text-[11px] text-text-secondary">Ahead or standard schedule</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-label-md text-label-md font-semibold text-text-primary">714</div>
+<div class="font-label-sm text-label-sm text-text-secondary">14.8%</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-bg">
+<div class="flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-text-secondary"></span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-text-primary">Withdrawn / Academic Deficit</span>
+<span class="font-body-sm text-body-sm text-[11px] text-text-secondary">Departed or stopped out</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-label-md text-label-md font-semibold text-text-primary">684</div>
+<div class="font-label-sm text-label-sm text-text-secondary">14.2%</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-3 rounded-lg bg-accent-pill-fill flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">auto_graph</span>
+<span class="font-body-sm text-body-sm text-primary font-medium text-xs">Retention pace is tracking 3.4% ahead of 2023 baseline across undergraduate programs.</span>
+</div>
+</div>
+<!-- Visual Card 2 (Span 4 cols): Estimated Dropout Risk Stratification -->
+<div class="lg:col-span-4 flex flex-col justify-between p-space-xl bg-surface-card rounded-xl shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h2 class="font-headline-sm text-headline-sm text-text-primary">Dropout Risk Stratification</h2>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-text-secondary">Active RF Model</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">Machine-learning probability calibration per enrolled student profile.</p>
+<!-- Risk Index Gauge summary banner -->
+<div class="p-space-md bg-surface-bg rounded-xl mb-space-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-subdued uppercase">Cohort Risk Index</span>
+<div class="flex items-baseline gap-2">
+<span class="font-data-metric-sm text-data-metric-sm text-text-primary">0.24</span>
+<span class="font-label-sm text-label-sm text-risk-low font-semibold">Favorable Stability</span>
+</div>
+</div>
+<!-- Gauge SVG -->
+<svg class="w-16 h-10" viewbox="0 0 100 55">
+<path d="M10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#E5E7EB" stroke-linecap="round" stroke-width="8"></path>
+<path d="M10 50 A 40 40 0 0 1 50 10" fill="none" stroke="#529E72" stroke-linecap="round" stroke-width="8"></path>
+<circle cx="50" cy="50" fill="#1C1C1C" r="4"></circle>
+</svg>
+</div>
+<!-- 3-Tier Risk Distribution Bars -->
+<div class="flex flex-col gap-space-md">
+<!-- Low Risk Tier -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-accent-pill-fill font-label-sm text-label-sm text-primary font-medium">Low Risk (&lt;0.35)</span>
+<span class="font-body-sm text-body-sm text-text-secondary text-xs">Self-sustaining</span>
+</div>
+<div class="font-label-md text-label-md text-text-primary font-semibold">3,615 <span class="font-normal text-text-secondary text-xs">(75.0%)</span></div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-risk-low h-2 rounded-full" style="width: 75.0%;"></div>
+</div>
+</div>
+<!-- Moderate Risk Tier -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-secondary font-medium">Moderate (0.35 - 0.70)</span>
+<span class="font-body-sm text-body-sm text-text-secondary text-xs">Early Drift</span>
+</div>
+<div class="font-label-md text-label-md text-text-primary font-semibold">821 <span class="font-normal text-text-secondary text-xs">(17.0%)</span></div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 17.0%;"></div>
+</div>
+</div>
+<!-- High Risk Tier (Discreet, supportive framing) -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm text-text-primary font-medium">Priority Attention (&gt;0.70)</span>
+<span class="font-body-sm text-body-sm text-text-secondary text-xs">Review Queue</span>
+</div>
+<div class="font-label-md text-label-md text-text-primary font-semibold">384 <span class="font-normal text-text-secondary text-xs">(8.0%)</span></div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-2 rounded-full" style="width: 8.0%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-3 flex items-center justify-between text-xs text-text-secondary">
+<span class="font-body-sm text-body-sm text-[12px]">Confidence Interval: 95% ± 0.012</span>
+<button class="font-label-sm text-label-sm text-primary font-medium hover:underline flex items-center gap-0.5">
+<span>Inspect Calibrations</span>
+<span class="material-symbols-outlined text-[14px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Visual Card 3 (Span 4 cols): Key Academic Risk Drivers & Active Dataset Status -->
+<div class="lg:col-span-4 flex flex-col justify-between p-space-xl bg-surface-card rounded-xl shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h2 class="font-headline-sm text-headline-sm text-text-primary">Key Academic Risk Drivers</h2>
+<span class="material-symbols-outlined text-[18px] text-text-subdued">hub</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">Top influential features correlated with early semester withdrawal.</p>
+<!-- Feature Impact Bars with SHAP weights -->
+<div class="flex flex-col gap-space-sm mb-space-lg">
+<div>
+<div class="flex items-center justify-between text-xs mb-1">
+<span class="font-body-sm text-body-sm font-medium text-text-primary">1st-Year Credit Completion Rate</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">84% impact</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-2 rounded-full" style="width: 84%;"></div>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between text-xs mb-1">
+<span class="font-body-sm text-body-sm font-medium text-text-primary">Term GPA Drop (&gt;0.5 delta)</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">76% impact</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary/85 h-2 rounded-full" style="width: 76%;"></div>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between text-xs mb-1">
+<span class="font-body-sm text-body-sm font-medium text-text-primary">Attendance / LMS Activity (&lt;70% logins)</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">62% impact</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 62%;"></div>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between text-xs mb-1">
+<span class="font-body-sm text-body-sm font-medium text-text-primary">Financial Hold / Delayed Aid Verification</span>
+<span class="font-label-sm text-label-sm font-semibold text-text-secondary">48% impact</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-text-secondary h-2 rounded-full" style="width: 48%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Dataset Status Panel -->
+<div class="p-space-md rounded-xl bg-surface-bg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-risk-low">check_circle</span>
+<span class="font-label-sm text-label-sm text-text-primary font-semibold">Active Validated Source</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-accent-pill-fill font-label-sm text-label-sm text-primary text-[10px]">Ready</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<span class="font-body-sm text-body-sm text-text-secondary truncate max-w-[200px]">ug_fall2024_admissions_records.csv</span>
+<span class="font-body-sm text-body-sm text-text-subdued">14.2 MB</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-text-secondary pt-1">
+<span>Target: <code class="text-text-primary font-mono font-medium">outcome_status</code></span>
+<span>42 Features • 0 Missing</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Row 3: Priority Student Review Table -->
+<section aria-label="Student Priority Review" class="flex flex-col bg-surface-card rounded-xl shadow-sm overflow-hidden">
+<!-- Table Header Toolbar -->
+<div class="p-space-xl flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-text-primary">Students Recommended for Priority Review</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-secondary font-semibold">384 in cohort</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">Prioritized by high-impact risk trajectory for proactive, compassionate academic advisement.</p>
+</div>
+<div class="flex items-center gap-2 self-start md:self-auto">
+<button class="flex items-center gap-1.5 px-space-md py-2 bg-surface-bg hover:bg-surface-container rounded-lg text-text-primary font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-[18px]">sim_card_download</span>
+<span>Export Review List (CSV)</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2 bg-primary rounded-lg text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">group_add</span>
+<span>Assign Cohort Outreach</span>
+</button>
+</div>
+</div>
+<!-- Filters & Multi-parameter Search -->
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-space-sm pt-2">
+<!-- Search input -->
+<div class="lg:col-span-5 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-subdued text-[18px]">search</span>
+<input class="w-full pl-9 pr-4 py-2 bg-surface-bg rounded-lg font-body-sm text-body-sm text-text-primary placeholder:text-text-subdued focus:outline-none focus:bg-surface-card shadow-xs" placeholder="Filter by Student ID, Major, Primary Factor..." type="text"/>
+</div>
+<!-- Risk Level Select -->
+<div class="lg:col-span-2">
+<select class="w-full px-3 py-2 bg-surface-bg rounded-lg font-body-sm text-body-sm text-text-primary focus:outline-none cursor-pointer">
+<option>All Risk Levels</option>
+<option selected="">Priority Attention (&gt;0.70)</option>
+<option>Moderate Drift (0.35 - 0.70)</option>
+<option>Low Risk (&lt;0.35)</option>
+</select>
+</div>
+<!-- Department Select -->
+<div class="lg:col-span-3">
+<select class="w-full px-3 py-2 bg-surface-bg rounded-lg font-body-sm text-body-sm text-text-primary focus:outline-none cursor-pointer">
+<option>All Academic Departments</option>
+<option>College of Engineering</option>
+<option>College of Arts &amp; Sciences</option>
+<option>School of Business</option>
+<option>Health Sciences</option>
+</select>
+</div>
+<!-- Review Status Select -->
+<div class="lg:col-span-2">
+<select class="w-full px-3 py-2 bg-surface-bg rounded-lg font-body-sm text-body-sm text-text-primary focus:outline-none cursor-pointer">
+<option>All Review Statuses</option>
+<option selected="">Pending Review</option>
+<option>Advisor Assigned</option>
+<option>Mentoring Active</option>
+<option>Resolution Confirmed</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Table Container -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-bg text-text-secondary font-label-sm text-label-sm uppercase tracking-wider text-[11px]">
+<th class="py-3 px-space-xl font-semibold">Student Identifier</th>
+<th class="py-3 px-space-md font-semibold">College &amp; Major</th>
+<th class="py-3 px-space-md font-semibold">Predicted Outcome</th>
+<th class="py-3 px-space-md font-semibold">Calculated Risk</th>
+<th class="py-3 px-space-md font-semibold">Primary Contributing Factors</th>
+<th class="py-3 px-space-md font-semibold">Review Status</th>
+<th class="py-3 px-space-xl font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-text-primary">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-bg/70 transition-colors group">
+<td class="py-3.5 px-space-xl">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-label-md text-label-md text-text-secondary font-semibold">
+                  MK
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-text-primary">#STU-9402</span>
+<span class="font-body-sm text-body-sm text-text-subdued text-xs">Freshman • Cohort 2024</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-text-primary">Computer Science</span>
+<span class="font-body-sm text-body-sm text-text-secondary text-xs">College of Engineering</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-text-primary font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                At-Risk (Dropout)
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-data-metric-sm text-data-metric-sm text-secondary font-bold">0.84</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-secondary font-semibold text-[10px]">High</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-wrap gap-1.5 max-w-xs">
+<span class="px-2 py-0.5 rounded bg-surface-bg text-text-secondary font-label-sm text-label-sm text-[11px]">Term GPA Drop (-0.82)</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg text-text-secondary font-label-sm text-label-sm text-[11px]">14 Missed LMS Logins</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent-pill-fill text-primary font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                Pending Outreach
+              </span>
+</td>
+<td class="py-3.5 px-space-xl text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-bg hover:bg-surface-container-high font-label-sm text-label-sm text-text-primary transition-colors">Quick Note</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm transition-colors shadow-xs">
+<span>Explainability</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-bg/70 transition-colors group">
+<td class="py-3.5 px-space-xl">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-label-md text-label-md text-text-secondary font-semibold">
+                  TR
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-text-primary">#STU-8819</span>
+<span class="font-body-sm text-body-sm text-text-subdued text-xs">Sophomore • Cohort 2023</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-text-primary">Mechanical Engineering</span>
+<span class="font-body-sm text-body-sm text-text-secondary text-xs">College of Engineering</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-text-primary font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                At-Risk (Dropout)
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-data-metric-sm text-data-metric-sm text-secondary font-bold">0.78</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-secondary font-semibold text-[10px]">High</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-wrap gap-1.5 max-w-xs">
+<span class="px-2 py-0.5 rounded bg-surface-bg text-text-secondary font-label-sm text-label-sm text-[11px]">Unmet Tuition Balance</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg text-text-secondary font-label-sm text-label-sm text-[11px]">Zero Midterm Submissions</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-bg text-text-secondary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[13px] text-text-subdued">person</span>
+                Assigned: Prof. Adams
+              </span>
+</td>
+<td class="py-3.5 px-space-xl text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-bg hover:bg-surface-container-high font-label-sm text-label-sm text-text-primary transition-colors">Quick Note</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm transition-colors shadow-xs">
+<span>Explainability</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-bg/70 transition-colors group">
+<td class="py-3.5 px-space-xl">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-label-md text-label-md text-text-secondary font-semibold">
+                  AL
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-text-primary">#STU-7231</span>
+<span class="font-body-sm text-body-sm text-text-subdued text-xs">Freshman • Cohort 2024</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-text-primary">Biology / Pre-Med</span>
+<span class="font-body-sm text-body-sm text-text-secondary text-xs">Arts &amp; Sciences</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low text-text-primary font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-text-subdued"></span>
+                Delayed Progression
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-data-metric-sm text-data-metric-sm text-text-primary font-bold">0.68</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-text-secondary font-semibold text-[10px]">Moderate</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-wrap gap-1.5 max-w-xs">
+<span class="px-2 py-0.5 rounded bg-surface-bg text-text-secondary font-label-sm text-label-sm text-[11px]">Chemistry Lab Incomplete</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg text-text-secondary font-label-sm text-label-sm text-[11px]">Commuter Isolation Index</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-text-primary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[13px] text-primary">event_available</span>
+                Mentoring Scheduled
+              </span>
+</td>
+<td class="py-3.5 px-space-xl text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-bg hover:bg-surface-container-high font-label-sm text-label-sm text-text-primary transition-colors">Quick Note</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm transition-colors shadow-xs">
+<span>Explainability</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-bg/70 transition-colors group">
+<td class="py-3.5 px-space-xl">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-label-md text-label-md text-text-secondary font-semibold">
+                  DS
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-text-primary">#STU-6514</span>
+<span class="font-body-sm text-body-sm text-text-subdued text-xs">Junior • Cohort 2022</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-text-primary">Finance &amp; Analytics</span>
+<span class="font-body-sm text-body-sm text-text-secondary text-xs">School of Business</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low text-text-primary font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-text-subdued"></span>
+                Enrolled with Deficit
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-data-metric-sm text-data-metric-sm text-text-primary font-bold">0.62</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-text-secondary font-semibold text-[10px]">Moderate</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-wrap gap-1.5 max-w-xs">
+<span class="px-2 py-0.5 rounded bg-surface-bg text-text-secondary font-label-sm text-label-sm text-[11px]">Core Math 204 Repeat</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg text-text-secondary font-label-sm text-label-sm text-[11px]">Advisor Meeting Missed</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent-pill-fill text-primary font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                Pending Outreach
+              </span>
+</td>
+<td class="py-3.5 px-space-xl text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-bg hover:bg-surface-container-high font-label-sm text-label-sm text-text-primary transition-colors">Quick Note</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm transition-colors shadow-xs">
+<span>Explainability</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-bg/70 transition-colors group">
+<td class="py-3.5 px-space-xl">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-label-md text-label-md text-text-secondary font-semibold">
+                  EJ
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-text-primary">#STU-5198</span>
+<span class="font-body-sm text-body-sm text-text-subdued text-xs">Freshman • Cohort 2024</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-text-primary">Psychology &amp; Neuroscience</span>
+<span class="font-body-sm text-body-sm text-text-secondary text-xs">Arts &amp; Sciences</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low text-text-primary font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-text-subdued"></span>
+                Enrolled with Deficit
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-data-metric-sm text-data-metric-sm text-text-primary font-bold">0.59</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-text-secondary font-semibold text-[10px]">Moderate</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-wrap gap-1.5 max-w-xs">
+<span class="px-2 py-0.5 rounded bg-surface-bg text-text-secondary font-label-sm text-label-sm text-[11px]">1st-Gen Bridge Incomplete</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg text-text-secondary font-label-sm text-label-sm text-[11px]">Late Registration Delta</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-bg text-text-secondary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[13px] text-text-secondary">school</span>
+                Tutoring Referral
+              </span>
+</td>
+<td class="py-3.5 px-space-xl text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-bg hover:bg-surface-container-high font-label-sm text-label-sm text-text-primary transition-colors">Quick Note</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm transition-colors shadow-xs">
+<span>Explainability</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Selection Controls -->
+<div class="px-space-xl py-space-md bg-surface-bg/50 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 text-xs text-text-secondary">
+<span class="font-body-sm text-body-sm text-text-secondary">Showing <strong class="text-text-primary font-medium">5</strong> of <strong class="text-text-primary font-medium">384</strong> students requiring review</span>
+<span class="text-text-subdued">•</span>
+<span class="font-body-sm text-body-sm text-text-subdued">Page 1 of 77</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-card text-text-subdued font-label-sm text-label-sm opacity-50 cursor-not-allowed shadow-xs" disabled="">
+<span class="material-symbols-outlined text-[14px]">chevron_left</span>
+<span>Previous</span>
+</button>
+<button class="px-2.5 py-1 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-medium shadow-xs">1</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-card hover:bg-surface-container text-text-primary font-label-sm text-label-sm transition-colors">2</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-card hover:bg-surface-container text-text-primary font-label-sm text-label-sm transition-colors">3</button>
+<span class="px-1 text-text-subdued text-xs">...</span>
+<button class="px-2.5 py-1 rounded-lg bg-surface-card hover:bg-surface-container text-text-primary font-label-sm text-label-sm transition-colors">77</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-card hover:bg-surface-container text-text-primary font-label-sm text-label-sm shadow-xs transition-colors">
+<span>Next</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Client-side Script for Filters and Tabs -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Toggle support for Outcome Distribution segmented tabs
+      const cohortButtons = document.querySelectorAll('button[class*="rounded-md"]');
+      cohortButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          if (btn.innerText.includes('All Colleges') || btn.innerText.includes('STEM') || btn.innerText.includes('Humanities')) {
+            cohortButtons.forEach(b => {
+              if (b.innerText.includes('All Colleges') || b.innerText.includes('STEM') || b.innerText.includes('Humanities')) {
+                b.classList.remove('bg-surface-card', 'text-text-primary', 'shadow-xs');
+                b.classList.add('text-text-secondary');
+              }
+            });
+            btn.classList.add('bg-surface-card', 'text-text-primary', 'shadow-xs');
+            btn.classList.remove('text-text-secondary');
+          }
+        });
+      });
+    });
+  </script>
+</div></main></div></body></html>
