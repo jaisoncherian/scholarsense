@@ -1,0 +1,29 @@
+# Dependencies and builds
+node_modules/
+dist/
+coverage/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Environment and secrets
+.env*
+
+# Data: never commit real data. Only the synthetic sample is tracked.
+*.csv
+!sample_data/synthetic_*.csv
+tmp/uploads/
+
+# Models and artefacts
+*.joblib
+*.pkl
+
+# Logs and OS files
+logs/
+*.log
+.DS_Store
+Thumbs.db
